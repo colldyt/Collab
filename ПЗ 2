@@ -1,0 +1,47 @@
+#1.1
+a=int(input())
+sm=1000
+#1.7
+m=n=k=0
+# print('Доступ разрешен'if a==1234 else'Неверный PIN')
+#1.2
+k=0
+while True:
+    k+=1
+    if a==1234:
+#1.3
+        print('Доступ разрешен','1 — Пополнить счёт','2 — Снять деньги','3 — Проверить баланс','0 — Выход',sep='\n')
+        break
+    elif k==3:
+        print('Карта заблокирована')
+        break
+    a=int(input())
+while True:
+    s=int(input())
+#1.4
+    if s==1:
+        mn=int(input())
+        if mn<0 or mn==0:
+            print('Некорректная сумма')
+        else:
+            sm+=mn
+            n+=1
+            print(sm)
+#1.5
+    elif s==2:
+        mn=int(input())
+#1.6
+        if mn>5000:
+            mn*=0.01
+        elif mn>sm or mn<0 or mn==0:
+            print('Недостаточно средств'if mn>sm else'Некорректная сумма')
+        else:
+            sm-=mn
+            m+=1
+            print(sm)
+    elif s==3:
+        print(sm)
+        k+=1
+    elif s==0:
+        break
+print(f'text{'\n'}Пополнений: {n}{'\n'}Снятий: {m}{'\n'}Проверок баланса: {k}')
