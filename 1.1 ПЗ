@@ -1,0 +1,23 @@
+import math
+#1.1
+r,a,b,c=float(input()),float(input()),float(input()),float(input())
+#1.2
+sc=math.pi*r**2
+sq=a**2
+re=b*c
+#1.3
+C=2*math.pi*r
+P=4*a
+Pe=2*(b+c)
+#1.4
+l=sc//sq
+m=re-sq
+#1.5
+r*=2
+a*=2
+b*=2
+c*=2
+#1.6
+print(True if math.hypot(a,a)<=2*r else False,True if 2*r<=a else False,True if math.hypot(b,c)<=2*r else False)
+#1.7
+print(f'Круг: S={sc:.3f}, C={C:.3f}{'\n'}Квадрат: S={sq:.3f}, P={P}{'\n'}Прямоугольник: S={re:.3f}, P={Pe}')
