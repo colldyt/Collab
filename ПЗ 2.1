@@ -1,6 +1,6 @@
 #1.1
 a,b=int(input()),int(input())
-print(a*0.9 if b>10 else a)
+print(int(a*0.9) if b>10 else a)
 #1.2
 while True:
     if a>0 and b>0:
@@ -22,7 +22,7 @@ print(f'Итого: {k} рублей')
 #1.5
 print(f'Позиций в чеке: {n}')
 #1.6
-kl=k*0.05 if k>5000 else k
+kl=k*0.95 if k>5000 else k
 d=k-kl if kl!=k else 0
 #1.7
 mx=max(ad)
